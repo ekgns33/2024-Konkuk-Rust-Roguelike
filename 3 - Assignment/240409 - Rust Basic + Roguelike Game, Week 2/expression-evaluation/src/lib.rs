@@ -22,7 +22,25 @@ enum Expression {
 }
 
 fn eval(e: Expression) -> Result<i64, String> {
-    todo!()
+    match e {
+        Expression::Op { op, left, right } => {
+            let left_val = eval(*left)?;
+            let right_val = eval(*right)?;
+            match op {
+                Operation::Add => Ok(left_val + right_val),
+                Operation::Sub => Ok(left_val - right_val),
+                Operation::Mul => Ok(left_val * right_val),
+                Operation::Div => {
+                    if right_val == 0 {
+                        Err(String::from("Division by zero"))
+                    } else {
+                        Ok(left_val / right_val)
+                    }
+                }
+            }
+        }
+        Expression::Value(val) => Ok(val),
+    }
 }
 
 #[cfg(test)]
