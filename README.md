@@ -212,8 +212,14 @@
       - Sending Packets
       - Receving Packets: More Asynchronous Streams
       - The Client's Main Function
-- Week 12 (TBA)
+- Week 12 (8/22) [[Lecture]](./1%20-%20Lecture/240822%20-%20Rust%20Basic%20+%20Roguelike%20Game,%20Week%2012.pdf) [[Example]](./2%20-%20Example/240822%20-%20Rust%20Basic%20+%20Roguelike%20Game,%20Week%2012/)
   - Asynchronous Programming, Part 3
+    - An Asynchronous Client and Server
+      - The Server's Main Function
+      - Handling Chat Connections: Async Mutexes
+      - The Group Table: Synchronous Mutexes
+      - Chat Groups: `tokio`'s Broadcast Channels
+    - Primitive Futures and Executors: When Is a Future Worth Polling Again?
 - Week 13 (TBA)
   - Asynchronous Programming, Part 4
   - Assignment #10
